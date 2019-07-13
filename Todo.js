@@ -17,20 +17,39 @@ var li;
  
  
  function addItem(){
-     console.log('add'); 
+     
+    inputRemove(); // call the fuction to  remove the paragraph  ->>> please remove the !!
+   
+
+     console.log(add); 
      
 
-     var input = document.getElementById('input')
-     var item=input.value;
+     var input = document.getElementById('input')  // user enter data 
+     var item=input.value;   // user input value is stotre in item
      ul=document.getElementById('list')
      var textnode=document.createTextNode(item)
      
      if(item===''){
-         
+         /* * this  part is for user if they does not enter any input  and click add button */ 
 
+        var npara=document.createElement("p")
+       // npara.textContent=
+       var node = document.createTextNode('*Please Enter A Your ToDo List Input');
+         npara.appendChild(node)
+        
+       // var element =document.getElementsByClassName('controls')
+        
+       var child = document.getElementById('input')
+        var element = child.parentNode;   ///  .parentNode  ,, returns ==>A Node object, representing the parent node of a node, or null if the node has no parent
+        element.insertBefore(npara,child)
+     
+    
+    
+    
+    }else{
 
-           
-     }else{
+/* *** this part will add the  usre input to new and create new checkbok */
+
          //create li
          li =document.createElement('li');
          
@@ -72,7 +91,7 @@ var li;
       console.log('delete button');
       
     
-    li=ul.children /// return array of child element of ul
+    li=ul.children // return array of child element of ul
      for (let index = 0; index < li.length; index++) {
          const element = li[index];
            while(li[index] && li[index].children[0].checked)   /// check index itself   means===>>> it should be on the present index and as well as checked insde on that  
@@ -82,3 +101,29 @@ var li;
            } 
      }
  }
+ // remove the paragraph 
+ function inputRemove()  
+ {
+    const mye=document.querySelectorAll('p')
+     mye.forEach((p) => {
+       p.textContent=''
+         
+     });
+    
+    
+}
+/* ADD DATAE AND REMOVE DATE */
+function effect(){
+var d = new Date();
+document.getElementById("nw").innerHTML = d;
+var nw1=document.getElementById("nw");
+nw1.style.fontSize="15px";
+//nw1.style.backgroundColor="red"
+}
+function back(){
+    const myE=document.getElementById("nw");
+    myE.textContent="MY Todo";
+  //  var nw1 =document.getElementById("nw");
+    myE.style.fontSize='29px';
+    myE.style.backgroundColor="rgb(229, 235, 234)"
+}
