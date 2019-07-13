@@ -2,7 +2,7 @@ body{
     font-family: 'Open Sans',sans-serif;
 	background-color: black;
     
-	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(ss.jpg);
    
 }
 #container {
@@ -16,9 +16,10 @@ body{
     color: black;
     border: 9px solid #ff00bf;
     border-radius: 35px;
-    background-color;
+    background-color:rgb(229, 235, 234); 
+  
 }
-#container h1{
+#container #nw{
     margin-top: 50px;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -124,3 +125,14 @@ body{
     opacity:1 !important;
     border-radius:10px;
 }
+
+#visual{
+    opacity:1 !important;
+    border-radius:10px;
+}
+
+p{
+    font-size:large;
+    text-align :center;
+  color:rgb(255, 13, 13)
+  }
